@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Installation\Steps;
+
+use Skobel\LaravelInstallCommand\Steps\Step;
+
+class $NAME$ extends Step
+{
+
+    /**
+     * Execute this installation step
+     */
+    public function execute()
+    {
+        $this->info('Running installation step: '. class_basename($this));
+
+
+    }
+}

@@ -8,7 +8,9 @@ class Installer
     /**
      * @var Configuration
      */
-    private static $configuration;
+    private static $configuration = null;
+
+    private static $defaultConfigurationClass = 'App\\Installation\\Configuration';
 
     /**
      * Run the installation steps
@@ -16,9 +18,15 @@ class Installer
      */
     public static function run()
     {
+        if(is_null(self::$configuration))
+        {
+            if(class_exists(self::$defaultConfigurationClass))
+                self::$configuration = new self::$defaultConfigurationClass;
+        }
+
         throw_unless(
             self::$configuration instanceof Configuration,
-            new \Exception('The Installer class requires a valid configuration in order to run.')
+            new \Exception('The Installer configuration must be an instance of '. Configuration::class)
         );
 
         collect(self::$configuration->steps())->each->execute();
