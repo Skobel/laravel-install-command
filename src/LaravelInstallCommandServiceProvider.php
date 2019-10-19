@@ -2,7 +2,9 @@
 
 namespace Skobel\LaravelInstallCommand;
 
-class LaravelInstallCommandServiceProvider
+use Illuminate\Support\ServiceProvider;
+
+class LaravelInstallCommandServiceProvider extends ServiceProvider
 {
 
 }
