@@ -1,0 +1,21 @@
+{
+    "name": "skobel/laravel-install-command",
+    "description": "",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skobel\\LaravelInstallCommand\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Skobel\\LaravelInstallCommand\\LaravelInstallCommandServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT"
+}
