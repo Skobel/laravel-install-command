@@ -1,6 +1,6 @@
 {
     "name": "skobel/laravel-install-command",
-    "description": "",
+    "description": "Configurable install command for Laravel. Simply define your application installation steps so you can deploy your project more easily.",
     "type": "library",
     "require": {
         "laravel/framework": "^6.0"
