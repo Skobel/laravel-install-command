@@ -38,10 +38,10 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->info('Beginning installation...');
+        $this->comment('⏳ Begin application installation...');
 
         Installer::run();
 
-        $this->info('Installation finished.');
+        $this->info('✅ Installation finished.');
     }
 }

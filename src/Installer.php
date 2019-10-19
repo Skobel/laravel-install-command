@@ -21,12 +21,6 @@ class Installer
             new \Exception('The Installer class requires a valid configuration in order to run.')
         );
 
-        /*
-        app(Pipeline::class)
-            ->through(self::$configuration->steps())
-            ->via('execute')
-            ->thenReturn();
-        */
         collect(self::$configuration->steps())->each->execute();
     }
 

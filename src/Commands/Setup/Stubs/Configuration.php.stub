@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Installation;
+
+
+use Skobel\LaravelInstallCommand\Steps\CopyDotEnvFile;
+use Skobel\LaravelInstallCommand\Steps\GenerateApplicationKey;
+use Skobel\LaravelInstallCommand\Steps\RunMigrations;
+use Skobel\LaravelInstallCommand\Steps\SeedDatabase;
+
+class Configuration extends \Skobel\LaravelInstallCommand\Configuration
+{
+    public function steps(): array
+    {
+        return [
+            //new CopyDotEnvFile,
+            //new GenerateApplicationKey,
+            //new RunMigrations,
+            //new SeedDatabase,
+        ];
+    }
+}

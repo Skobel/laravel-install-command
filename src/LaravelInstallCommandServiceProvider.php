@@ -4,6 +4,7 @@ namespace Skobel\LaravelInstallCommand;
 
 use Illuminate\Support\ServiceProvider;
 use Skobel\LaravelInstallCommand\Commands\InstallCommand;
+use Skobel\LaravelInstallCommand\Commands\Setup\SetupCommand;
 
 class LaravelInstallCommandServiceProvider extends ServiceProvider
 {
@@ -12,7 +13,8 @@ class LaravelInstallCommandServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole())
         {
             $this->commands([
-                InstallCommand::class
+                InstallCommand::class,
+                SetupCommand::class
             ]);
         }
     }
